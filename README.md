@@ -19,7 +19,7 @@ npm install
 
 ### Edit config files (server/bin/config.json)
 ```
-mv server/bin/config.json.sample server/bin/config.json
+cp server/bin/config.json.sample server/bin/config.json
 ```
 
 ### Run server
@@ -32,6 +32,7 @@ npm run start
 ---
 
 To get your link shorten visit /encode route with query param url
+The url should start with http://, https:// etc.
 
 Example
 ```

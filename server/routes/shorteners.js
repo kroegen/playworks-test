@@ -1,11 +1,9 @@
 const express = require('express');
 const shorteners = express.Router();
 
-const shortenersController = require('../controllers/shorteners');
+const { encode, decode } = require('../controllers/shorteners');
 
-console.log(shortenersController);
-
-shorteners.get('/encode', shortenersController.encode);
-shorteners.get('/*', shortenersController.decode);
+shorteners.get('/encode', encode);
+shorteners.get('/*', decode);
 
 module.exports = shorteners;

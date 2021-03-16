@@ -1,6 +1,6 @@
-const shorteners = require('../services/shorteners');
+const { encodeUrl, decodeUrl } = require('../services/shorteners');
 
 module.exports = {
-    encode: shorteners.encodeUrl,
-    decode: shorteners.decodeUrl,
+    encode: encodeUrl,
+    decode: decodeUrl
 }
