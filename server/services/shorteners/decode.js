@@ -8,9 +8,9 @@ exports.decodeUrl = async(req, res, next) => {
 
         if (!link) {
             await res.send({ status: 0, error: errors['link'] });
+        } else {
+            await res.redirect(301, `${link.longUrl}`);
         }
-
-        await res.redirect(301, `${link.longUrl}`);
     } catch (error) {
         await res.send({ status: 0, error: errors['server'] });
     }
